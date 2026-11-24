@@ -1,0 +1,368 @@
+{
+  "說明": "頁的類型、種類、必填欄位、必要小節和連結規則。scripts/ 的程式都照這個檔案運作。新增種類或類型只改這裡和 templates/。",
+  "framework_version": "1.2.0",
+  "common_required": [
+    "title",
+    "type",
+    "summary",
+    "status",
+    "updated"
+  ],
+  "summary_max_chars": 80,
+  "status": [
+    "draft",
+    "reviewed",
+    "retired"
+  ],
+  "origin": [
+    "ingest",
+    "fileback"
+  ],
+  "lang": [
+    "zh",
+    "en",
+    "ja"
+  ],
+  "region": [
+    "any",
+    "intl",
+    "tw",
+    "eu",
+    "se",
+    "ca",
+    "us",
+    "jp"
+  ],
+  "types": {
+    "raw": {
+      "zh": "原件",
+      "folder": "raw",
+      "shared": false,
+      "kinds": {
+        "handbook": "手冊",
+        "code": "規範",
+        "standard": "標準",
+        "paper": "論文",
+        "report": "計算書",
+        "drawings": "圖說",
+        "tutorial": "教學",
+        "book": "書",
+        "web": "網頁",
+        "vendor": "廠商資料",
+        "experience": "經驗",
+        "project": "工作專案的快照"
+      },
+      "required": [
+        "kind",
+        "format",
+        "lang"
+      ],
+      "sections": [
+        "可信度",
+        "閱讀進度",
+        "已知問題"
+      ],
+      "formats": [
+        "pdf-text",
+        "pdf-image",
+        "pdf-vector",
+        "web",
+        "epub",
+        "none"
+      ]
+    },
+    "term": {
+      "zh": "詞條",
+      "folder": "terms",
+      "shared": true,
+      "domains": {
+        "structural": "結構工程：材料、構件、接合、接合件、性質與係數、規範",
+        "construction": "施工：組裝、吊裝",
+        "ai-agent": "AI agent 與工作框架：Claude Code、harness、驗收",
+        "javascript": "JavaScript 語言",
+        "web3d": "網頁 3D：three.js、React Three Fiber、Rapier",
+        "organization": "組織與專案名稱",
+        "knowledge-base": "知識庫框架本身的用語：頁、詞條、技能、動作（原本的用語對照）",
+        "general": "通用的軟體與檔案用語：檔頭、CSV、OCR、git"
+      },
+      "unused_ok": [
+        "knowledge-base",
+        "general"
+      ],
+      "unused_ok_說明": "這些領域是框架本身或通用的用語，不會寫進知識頁的 terms 欄位，lint 不提醒「沒有頁用到」。",
+      "kinds": {
+        "material": "材料",
+        "member": "構件",
+        "connection": "接合",
+        "fastener": "接合件",
+        "action": "作用與受力",
+        "property": "性質與係數",
+        "method": "方法與理論",
+        "standard": "規範與標準",
+        "tool": "軟體與工具",
+        "command": "指令與快捷鍵",
+        "api": "程式介面",
+        "concept": "概念",
+        "organization": "組織與專案"
+      },
+      "required": [
+        "kind",
+        "name_zh",
+        "name_en"
+      ],
+      "sections": [],
+      "links": {
+        "kind-of": [
+          "term"
+        ],
+        "part-of": [
+          "term"
+        ]
+      }
+    },
+    "note": {
+      "zh": "筆記",
+      "folder": "note",
+      "shared": false,
+      "kinds": {
+        "concept": "概念",
+        "rule": "規則",
+        "procedure": "步驟",
+        "example": "算例",
+        "claim": "主張",
+        "review": "審查",
+        "snippet": "程式片段",
+        "config": "設定"
+      },
+      "required": [
+        "kind",
+        "point",
+        "item",
+        "terms",
+        "raw",
+        "region"
+      ],
+      "required_by_kind": {
+        "review": [
+          "against"
+        ]
+      },
+      "sections_by_kind": {
+        "rule": [
+          "成立條件",
+          "不適用的情況"
+        ],
+        "example": [
+          "輸入",
+          "結果"
+        ],
+        "procedure": [
+          "步驟"
+        ]
+      },
+      "max_body_chars": 900,
+      "kind_groups": {
+        "principle": {
+          "zh": "原理",
+          "kinds": [
+            "concept",
+            "rule"
+          ]
+        },
+        "method": {
+          "zh": "做法",
+          "kinds": [
+            "procedure",
+            "example",
+            "snippet",
+            "config"
+          ]
+        },
+        "view": {
+          "zh": "觀點",
+          "kinds": [
+            "claim",
+            "review"
+          ]
+        }
+      },
+      "data_field": "file",
+      "file_fields": {
+        "說明": "筆記可以附一個程式檔（和筆記同名、同資料夾）。有 file 時要填 language、verified，內文要有「## 程式碼」小節；這個小節不算進內文長度。",
+        "required": [
+          "language",
+          "verified"
+        ],
+        "section": "程式碼",
+        "verified": [
+          "ran",
+          "transcribed",
+          "untested"
+        ]
+      }
+    },
+    "data": {
+      "zh": "資料",
+      "folder": "data",
+      "shared": false,
+      "data_ext": [
+        ".csv"
+      ],
+      "kinds": {
+        "property": "性質值",
+        "factor": "係數",
+        "schedule": "配置表",
+        "parameter": "參數",
+        "result": "結果",
+        "reference": "對照表",
+        "comparison": "比較",
+        "list": "清單"
+      },
+      "required": [
+        "kind",
+        "point",
+        "item",
+        "terms",
+        "raw",
+        "region"
+      ],
+      "sections": [
+        "欄位",
+        "怎麼查"
+      ]
+    },
+    "figure": {
+      "zh": "圖",
+      "folder": "figure",
+      "shared": false,
+      "data_field": "image",
+      "image_ext": [
+        ".png",
+        ".jpg",
+        ".jpeg",
+        ".svg"
+      ],
+      "kinds": {
+        "detail": "細部圖",
+        "drawing": "圖面",
+        "diagram": "示意圖",
+        "chart": "圖表",
+        "screenshot": "畫面截圖",
+        "photo": "照片"
+      },
+      "required": [
+        "kind",
+        "point",
+        "item",
+        "terms",
+        "raw",
+        "image"
+      ],
+      "sections": [
+        "圖上原文",
+        "說明",
+        "關鍵數據",
+        "適用條件"
+      ]
+    },
+    "skill": {
+      "zh": "技能",
+      "folder": "skills",
+      "shared": true,
+      "entry": "SKILL.md",
+      "kinds": {
+        "workflow": "工作流程",
+        "tool": "工具操作",
+        "check": "檢查與審查",
+        "setup": "建置"
+      },
+      "required": [
+        "kind",
+        "name",
+        "description",
+        "version",
+        "share"
+      ],
+      "sections": [],
+      "description_max_chars": 1024,
+      "files": {
+        "tests": "tests.md",
+        "changelog": "CHANGELOG.md",
+        "profiles": "profiles",
+        "profile_example": "profile.example"
+      },
+      "說明": "skills/<代號>/SKILL.md。代號是前綴加三位數（rhino-002）。terms 講到的詞條、points 用到的知識點（主題:知識點）、from 依據的頁、uses 要先用的其他技能。技能本體不能引用專案主題；專案的慣例和案件經驗放 profiles/<專案主題>/。",
+      "max_lines": 500
+    }
+  },
+  "links": {
+    "terms": [
+      "term"
+    ],
+    "from": [
+      "note",
+      "data",
+      "figure"
+    ],
+    "against": [
+      "note",
+      "data",
+      "figure"
+    ],
+    "data": [
+      "data"
+    ],
+    "see_also": [
+      "note",
+      "data",
+      "figure"
+    ],
+    "pair": [
+      "note",
+      "data",
+      "figure"
+    ],
+    "uses": [
+      "skill"
+    ]
+  },
+  "pages": [
+    "note",
+    "data",
+    "figure"
+  ],
+  "wiki_kinds": {
+    "general": "通用主題",
+    "project": "專案主題"
+  },
+  "point": {
+    "說明": "頁放在 <類型>/<知識點>/ 底下，檔名是 <知識點>-<三位數編號>-<描述>。編號在全部主題共用一套；同編號就是同一項，四種頁之間檔名必須完全相同，並在 pair 互相列出。知識點的入口是 note/<知識點>/NOTE.md。",
+    "digits": 3,
+    "entry": "NOTE.md",
+    "entry_required": [
+      "title",
+      "point",
+      "summary",
+      "updated"
+    ]
+  },
+  "share": {
+    "public": "可以公開",
+    "attribution": "可以公開，但要標出處並遵守授權條件",
+    "private": "不能公開"
+  },
+  "share_說明": "原件登記卡用 share 標授權。頁的可見度取它 raw 原件和 from 依據裡最嚴格的；專案主題的頁一律 private；沒標的原件當成 private。頁或技能可以自己標更嚴格的 share，不能標得比推算結果寬。",
+  "skill_points": "技能的 points 寫成「主題:知識點」，例如 timber:assembly-sequence。",
+  "docs": "docs",
+  "docs_說明": "知識庫的文件（設計、問題紀錄、計畫、討論紀錄），路徑相對於知識庫根目錄。單獨成一個 repo 時寫成 docs；和工作架構放在一起、文件要放工作架構的文件區時，改成相對路徑，例如 ../../docs/knowledge。",
+  "plans": {
+    "folder": "plans",
+    "archive": "archive",
+    "files": [
+      "plan.md",
+      "specs.md",
+      "tasks.md"
+    ],
+    "templates": "templates/plan"
+  }
+}

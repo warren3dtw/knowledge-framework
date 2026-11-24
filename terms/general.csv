@@ -1,0 +1,6 @@
+id,kind,name_zh,name_en,name_ja,aliases,kind-of,part-of,summary,status,updated
+agent,concept,代理程式,Agent,エージェント,AI agent；agent,,,會自己讀檔、跑指令的 AI 工具，例如 Claude Code。,draft,2026-11-17
+csv,concept,逗號分隔值,CSV,CSV,comma-separated values；.csv,,,表格的純文字格式，Excel 可以直接開。,draft,2026-11-17
+frontmatter,concept,檔頭,Frontmatter,フロントマター,YAML；檔頭欄位,,,檔案開頭兩條 `---` 之間的欄位。,draft,2026-11-17
+git-commit,command,提交 / 推送,Commit / push,コミット / プッシュ,commit；push；git,,,git 的存檔和上傳。,draft,2026-11-17
+ocr,method,文字辨識,OCR,文字認識,optical character recognition；光學字元辨識,,,從圖片辨識文字，結果要校對。,draft,2026-11-17

@@ -1,0 +1,40 @@
+id,kind,name_zh,name_en,name_ja,aliases,kind-of,part-of,summary,status,updated
+atlas,concept,圖集,Atlas,図集,export atlas；細部圖集,,llm-wiki,把圖和配置表依知識點排成一份文件。,draft,2026-11-17
+attached-code,concept,程式碼,Code,コード,code；程式片段；設定檔；提示詞,,note-page,附在筆記旁邊的程式片段、設定檔、提示詞。,draft,2026-11-17
+changelog,concept,版本紀錄,Changelog,変更履歴,CHANGELOG；CHANGELOG.md；framework_version,,llm-wiki,框架的版本，號碼在 `schema.json` 的 `framework_version`。,draft,2026-11-17
+crop,concept,裁切,Crop,切り抜き,,,llm-wiki,從 PDF 頁面切出一塊區域存成圖。,draft,2026-11-17
+data-page,concept,資料,Data,データ,data；資料頁,page,,一張表格：`.md` 說明加 `.csv` 數據。,draft,2026-11-17
+datasheet,concept,數據手冊,Datasheet,データシート,export datasheet,,llm-wiki,把資料頁依主題和種類排成一份文件。,draft,2026-11-17
+denylist,concept,禁用字清單,Denylist,禁止語リスト,denylist.txt；禁用字,,llm-wiki,不能出現在公開輸出裡的字。根目錄一份管全部，技能的 profile 裡各一份只管那個技能。,draft,2026-11-17
+empty-framework,concept,空框架,Framework,空のフレームワーク,framework；export framework,,llm-wiki,只有程式、規則、模板的版本，可以給別人。,draft,2026-11-17
+export,command,輸出,Export,エクスポート,,,llm-wiki,產生細部圖集、數據手冊、私人版或公開版的技能、空框架。,draft,2026-11-17
+feedback-log,concept,問題與調整紀錄,Feedback,フィードバック記録,FEEDBACK；FEEDBACK.md,,llm-wiki,`docs/FEEDBACK.md`，只記框架本身的問題。,draft,2026-11-17
+figure-page,concept,圖,Figure,図,figure；圖頁,page,,影像加上圖上原文和說明。,draft,2026-11-17
+fileback,command,回存,Fileback,書き戻し,,,llm-wiki,把查詢得到的答案存回成新的一頁。,draft,2026-11-17
+ingest,command,攝入,Ingest,取り込み,,,llm-wiki,登記原件、擷取文字和圖。,draft,2026-11-17
+install,command,安裝,Install,インストール,install skill,,llm-wiki,把技能裝進工作專案，並記下版本。,draft,2026-11-17
+knowledge-point,concept,知識點,Point,知識ポイント,point,,llm-wiki,依知識領域分的資料夾，各種頁共用同一個名稱。,draft,2026-11-17
+lint,command,檢查,Lint,リント,,,llm-wiki,檢查格式、連結、編號、索引，驗證公式。,draft,2026-11-17
+llm-wiki,tool,LLM 知識庫,LLM wiki,LLMウィキ,知識庫；知識區；knowledge base,,,這個個人知識庫的框架：原件整理成頁，用詞條串起來，再打包成技能。,draft,2026-11-17
+new-command,command,新建,New,新規作成,new；new plan；new skill,,llm-wiki,建立新的主題、技能或計畫。,draft,2026-11-17
+note-page,concept,筆記,Note,ノート,note,page,,用文字講一件事：原理、做法或觀點。,draft,2026-11-17
+owner-review,command,確認,Review,確認,review；query review,,llm-wiki,擁有者核對後把狀態改成 reviewed。,draft,2026-11-17
+page,concept,頁,Page,ページ,,,llm-wiki,筆記、資料、圖三種的統稱。,draft,2026-11-17
+page-item,concept,項目,Item,項目,item；同編號,,llm-wiki,知識點-編號，例如 bearing-connection-001。同編號就是同一項。,draft,2026-11-17
+page-status,concept,頁的狀態,Status,ステータス,status；draft；reviewed；retired；草稿；已確認；停用,,page,頁的狀態：草稿、已確認、停用；只有擁有者能設 reviewed。,draft,2026-11-17
+pair-field,concept,同編號,Pair,ペア,pair,,page,檔頭欄位，列出同一項的其他頁。,draft,2026-11-17
+point-entry,concept,入口檔,NOTE.md,入口ファイル,NOTE.md；知識點入口,,knowledge-point,每個知識點的入口，像技能的 SKILL.md。,draft,2026-11-17
+profile-example,concept,示範設定,Profile example,サンプルプロファイル,profile.example,skill-profile,skill,去識別化的 profile，公開輸出時取代 profiles。,draft,2026-11-17
+query,command,查詢,Query,検索,,,llm-wiki,找頁、查表、追依據。,draft,2026-11-17
+raw,concept,原件,Raw source,原典,原始資料；登記卡；source,,llm-wiki,原始的 PDF、網頁快照，和它的登記卡。,draft,2026-11-17
+region-box,concept,裁切範圍,Region box,切り抜き範囲,region；region box,,crop,裁切的頁碼和座標，可以重新裁出同一塊。,draft,2026-11-17
+schema-json,concept,結構定義,Schema,スキーマ,schema；schema.json,,llm-wiki,`schema.json`，規定有哪些類型和欄位。,draft,2026-11-17
+share-level,concept,可見度,Share,公開範囲,share；public；attribution；private,,llm-wiki,public 可以公開、attribution 要標出處、private 不能公開。原件登記，其他推算。,draft,2026-11-17
+skill,concept,技能,Skill,スキル,技能包；能力包,,llm-wiki,`skills/<代號>/`：agent 可以照著做的能力包，依據頁，全部主題共用。,draft,2026-11-17
+skill-incoming,concept,待併入的改動,Incoming,取り込み待ちの変更,incoming,,skill,技能的 `incoming/`：從工作專案帶回來、還沒併入的差異。,draft,2026-11-17
+skill-md,concept,技能本體,SKILL.md,スキル本体,SKILL.md,,skill,技能的說明：何時用、規則、步驟。,draft,2026-11-17
+skill-profile,concept,個人設定,Profile,プロファイル,profile；profiles；專案設定,,skill,技能的 `profiles/<專案主題>/`：某個專案的慣例、參數、案件經驗，私人。,draft,2026-11-17
+term,concept,詞條,Term,用語,原子；atom；用語對照；glossary,,llm-wiki,最小的概念：有中英日名稱、上下位關係，依領域分檔，全部主題共用。,draft,2026-11-17
+wiki,concept,主題,Wiki,テーマ,collection；主題資料夾,,llm-wiki,`wikis/` 底下的一個資料夾，例如 timber、project-demo。,draft,2026-11-17
+wiki-index,concept,索引,Index,索引,index；OVERVIEW.md,,llm-wiki,`index/` 裡給 agent 先讀的目錄。,draft,2026-11-17
+work-plan,concept,計畫,Plan,計画,plan；specs；tasks；規格；任務,,llm-wiki,`docs/plans/<日期-名稱>/` 的 plan、specs、tasks 三份檔案，給一次做不完的工作用。,draft,2026-11-17

@@ -1,0 +1,865 @@
+{
+ "agent": {
+  "zh": "代理程式",
+  "en": "Agent",
+  "ja": "エージェント",
+  "aliases": [
+   "AI agent",
+   "agent"
+  ],
+  "class": "concept",
+  "domain": "general",
+  "definition": "會自己讀檔、跑指令的 AI 工具，例如 Claude Code。",
+  "kind_of": [],
+  "part_of": [],
+  "narrower": [],
+  "pages": [],
+  "status": "draft"
+ },
+ "atlas": {
+  "zh": "圖集",
+  "en": "Atlas",
+  "ja": "図集",
+  "aliases": [
+   "export atlas",
+   "細部圖集"
+  ],
+  "class": "concept",
+  "domain": "knowledge-base",
+  "definition": "把圖和配置表依知識點排成一份文件。",
+  "kind_of": [],
+  "part_of": [
+   "llm-wiki"
+  ],
+  "narrower": [],
+  "pages": [],
+  "status": "draft"
+ },
+ "attached-code": {
+  "zh": "程式碼",
+  "en": "Code",
+  "ja": "コード",
+  "aliases": [
+   "code",
+   "程式片段",
+   "設定檔",
+   "提示詞"
+  ],
+  "class": "concept",
+  "domain": "knowledge-base",
+  "definition": "附在筆記旁邊的程式片段、設定檔、提示詞。",
+  "kind_of": [],
+  "part_of": [
+   "note-page"
+  ],
+  "narrower": [],
+  "pages": [],
+  "status": "draft"
+ },
+ "changelog": {
+  "zh": "版本紀錄",
+  "en": "Changelog",
+  "ja": "変更履歴",
+  "aliases": [
+   "CHANGELOG",
+   "CHANGELOG.md",
+   "framework_version"
+  ],
+  "class": "concept",
+  "domain": "knowledge-base",
+  "definition": "框架的版本，號碼在 `schema.json` 的 `framework_version`。",
+  "kind_of": [],
+  "part_of": [
+   "llm-wiki"
+  ],
+  "narrower": [],
+  "pages": [],
+  "status": "draft"
+ },
+ "crop": {
+  "zh": "裁切",
+  "en": "Crop",
+  "ja": "切り抜き",
+  "aliases": [],
+  "class": "concept",
+  "domain": "knowledge-base",
+  "definition": "從 PDF 頁面切出一塊區域存成圖。",
+  "kind_of": [],
+  "part_of": [
+   "llm-wiki"
+  ],
+  "narrower": [
+   "region-box"
+  ],
+  "pages": [],
+  "status": "draft"
+ },
+ "csv": {
+  "zh": "逗號分隔值",
+  "en": "CSV",
+  "ja": "CSV",
+  "aliases": [
+   "comma-separated values",
+   ".csv"
+  ],
+  "class": "concept",
+  "domain": "general",
+  "definition": "表格的純文字格式，Excel 可以直接開。",
+  "kind_of": [],
+  "part_of": [],
+  "narrower": [],
+  "pages": [],
+  "status": "draft"
+ },
+ "data-page": {
+  "zh": "資料",
+  "en": "Data",
+  "ja": "データ",
+  "aliases": [
+   "data",
+   "資料頁"
+  ],
+  "class": "concept",
+  "domain": "knowledge-base",
+  "definition": "一張表格：`.md` 說明加 `.csv` 數據。",
+  "kind_of": [
+   "page"
+  ],
+  "part_of": [],
+  "narrower": [],
+  "pages": [],
+  "status": "draft"
+ },
+ "datasheet": {
+  "zh": "數據手冊",
+  "en": "Datasheet",
+  "ja": "データシート",
+  "aliases": [
+   "export datasheet"
+  ],
+  "class": "concept",
+  "domain": "knowledge-base",
+  "definition": "把資料頁依主題和種類排成一份文件。",
+  "kind_of": [],
+  "part_of": [
+   "llm-wiki"
+  ],
+  "narrower": [],
+  "pages": [],
+  "status": "draft"
+ },
+ "denylist": {
+  "zh": "禁用字清單",
+  "en": "Denylist",
+  "ja": "禁止語リスト",
+  "aliases": [
+   "denylist.txt",
+   "禁用字"
+  ],
+  "class": "concept",
+  "domain": "knowledge-base",
+  "definition": "不能出現在公開輸出裡的字。根目錄一份管全部，技能的 profile 裡各一份只管那個技能。",
+  "kind_of": [],
+  "part_of": [
+   "llm-wiki"
+  ],
+  "narrower": [],
+  "pages": [],
+  "status": "draft"
+ },
+ "empty-framework": {
+  "zh": "空框架",
+  "en": "Framework",
+  "ja": "空のフレームワーク",
+  "aliases": [
+   "framework",
+   "export framework"
+  ],
+  "class": "concept",
+  "domain": "knowledge-base",
+  "definition": "只有程式、規則、模板的版本，可以給別人。",
+  "kind_of": [],
+  "part_of": [
+   "llm-wiki"
+  ],
+  "narrower": [],
+  "pages": [],
+  "status": "draft"
+ },
+ "export": {
+  "zh": "輸出",
+  "en": "Export",
+  "ja": "エクスポート",
+  "aliases": [],
+  "class": "command",
+  "domain": "knowledge-base",
+  "definition": "產生細部圖集、數據手冊、私人版或公開版的技能、空框架。",
+  "kind_of": [],
+  "part_of": [
+   "llm-wiki"
+  ],
+  "narrower": [],
+  "pages": [],
+  "status": "draft"
+ },
+ "feedback-log": {
+  "zh": "問題與調整紀錄",
+  "en": "Feedback",
+  "ja": "フィードバック記録",
+  "aliases": [
+   "FEEDBACK",
+   "FEEDBACK.md"
+  ],
+  "class": "concept",
+  "domain": "knowledge-base",
+  "definition": "`docs/FEEDBACK.md`，只記框架本身的問題。",
+  "kind_of": [],
+  "part_of": [
+   "llm-wiki"
+  ],
+  "narrower": [],
+  "pages": [],
+  "status": "draft"
+ },
+ "figure-page": {
+  "zh": "圖",
+  "en": "Figure",
+  "ja": "図",
+  "aliases": [
+   "figure",
+   "圖頁"
+  ],
+  "class": "concept",
+  "domain": "knowledge-base",
+  "definition": "影像加上圖上原文和說明。",
+  "kind_of": [
+   "page"
+  ],
+  "part_of": [],
+  "narrower": [],
+  "pages": [],
+  "status": "draft"
+ },
+ "fileback": {
+  "zh": "回存",
+  "en": "Fileback",
+  "ja": "書き戻し",
+  "aliases": [],
+  "class": "command",
+  "domain": "knowledge-base",
+  "definition": "把查詢得到的答案存回成新的一頁。",
+  "kind_of": [],
+  "part_of": [
+   "llm-wiki"
+  ],
+  "narrower": [],
+  "pages": [],
+  "status": "draft"
+ },
+ "frontmatter": {
+  "zh": "檔頭",
+  "en": "Frontmatter",
+  "ja": "フロントマター",
+  "aliases": [
+   "YAML",
+   "檔頭欄位"
+  ],
+  "class": "concept",
+  "domain": "general",
+  "definition": "檔案開頭兩條 `---` 之間的欄位。",
+  "kind_of": [],
+  "part_of": [],
+  "narrower": [],
+  "pages": [],
+  "status": "draft"
+ },
+ "git-commit": {
+  "zh": "提交 / 推送",
+  "en": "Commit / push",
+  "ja": "コミット / プッシュ",
+  "aliases": [
+   "commit",
+   "push",
+   "git"
+  ],
+  "class": "command",
+  "domain": "general",
+  "definition": "git 的存檔和上傳。",
+  "kind_of": [],
+  "part_of": [],
+  "narrower": [],
+  "pages": [],
+  "status": "draft"
+ },
+ "ingest": {
+  "zh": "攝入",
+  "en": "Ingest",
+  "ja": "取り込み",
+  "aliases": [],
+  "class": "command",
+  "domain": "knowledge-base",
+  "definition": "登記原件、擷取文字和圖。",
+  "kind_of": [],
+  "part_of": [
+   "llm-wiki"
+  ],
+  "narrower": [],
+  "pages": [],
+  "status": "draft"
+ },
+ "install": {
+  "zh": "安裝",
+  "en": "Install",
+  "ja": "インストール",
+  "aliases": [
+   "install skill"
+  ],
+  "class": "command",
+  "domain": "knowledge-base",
+  "definition": "把技能裝進工作專案，並記下版本。",
+  "kind_of": [],
+  "part_of": [
+   "llm-wiki"
+  ],
+  "narrower": [],
+  "pages": [],
+  "status": "draft"
+ },
+ "knowledge-point": {
+  "zh": "知識點",
+  "en": "Point",
+  "ja": "知識ポイント",
+  "aliases": [
+   "point"
+  ],
+  "class": "concept",
+  "domain": "knowledge-base",
+  "definition": "依知識領域分的資料夾，各種頁共用同一個名稱。",
+  "kind_of": [],
+  "part_of": [
+   "llm-wiki"
+  ],
+  "narrower": [
+   "point-entry"
+  ],
+  "pages": [],
+  "status": "draft"
+ },
+ "lint": {
+  "zh": "檢查",
+  "en": "Lint",
+  "ja": "リント",
+  "aliases": [],
+  "class": "command",
+  "domain": "knowledge-base",
+  "definition": "檢查格式、連結、編號、索引，驗證公式。",
+  "kind_of": [],
+  "part_of": [
+   "llm-wiki"
+  ],
+  "narrower": [],
+  "pages": [],
+  "status": "draft"
+ },
+ "llm-wiki": {
+  "zh": "LLM 知識庫",
+  "en": "LLM wiki",
+  "ja": "LLMウィキ",
+  "aliases": [
+   "知識庫",
+   "知識區",
+   "knowledge base"
+  ],
+  "class": "tool",
+  "domain": "knowledge-base",
+  "definition": "這個個人知識庫的框架：原件整理成頁，用詞條串起來，再打包成技能。",
+  "kind_of": [],
+  "part_of": [],
+  "narrower": [
+   "atlas",
+   "changelog",
+   "crop",
+   "datasheet",
+   "denylist",
+   "empty-framework",
+   "export",
+   "feedback-log",
+   "fileback",
+   "ingest",
+   "install",
+   "knowledge-point",
+   "lint",
+   "new-command",
+   "owner-review",
+   "page",
+   "page-item",
+   "query",
+   "raw",
+   "schema-json",
+   "share-level",
+   "skill",
+   "term",
+   "wiki",
+   "wiki-index",
+   "work-plan"
+  ],
+  "pages": [],
+  "status": "draft"
+ },
+ "new-command": {
+  "zh": "新建",
+  "en": "New",
+  "ja": "新規作成",
+  "aliases": [
+   "new",
+   "new plan",
+   "new skill"
+  ],
+  "class": "command",
+  "domain": "knowledge-base",
+  "definition": "建立新的主題、技能或計畫。",
+  "kind_of": [],
+  "part_of": [
+   "llm-wiki"
+  ],
+  "narrower": [],
+  "pages": [],
+  "status": "draft"
+ },
+ "note-page": {
+  "zh": "筆記",
+  "en": "Note",
+  "ja": "ノート",
+  "aliases": [
+   "note"
+  ],
+  "class": "concept",
+  "domain": "knowledge-base",
+  "definition": "用文字講一件事：原理、做法或觀點。",
+  "kind_of": [
+   "page"
+  ],
+  "part_of": [],
+  "narrower": [
+   "attached-code"
+  ],
+  "pages": [],
+  "status": "draft"
+ },
+ "ocr": {
+  "zh": "文字辨識",
+  "en": "OCR",
+  "ja": "文字認識",
+  "aliases": [
+   "optical character recognition",
+   "光學字元辨識"
+  ],
+  "class": "method",
+  "domain": "general",
+  "definition": "從圖片辨識文字，結果要校對。",
+  "kind_of": [],
+  "part_of": [],
+  "narrower": [],
+  "pages": [],
+  "status": "draft"
+ },
+ "owner-review": {
+  "zh": "確認",
+  "en": "Review",
+  "ja": "確認",
+  "aliases": [
+   "review",
+   "query review"
+  ],
+  "class": "command",
+  "domain": "knowledge-base",
+  "definition": "擁有者核對後把狀態改成 reviewed。",
+  "kind_of": [],
+  "part_of": [
+   "llm-wiki"
+  ],
+  "narrower": [],
+  "pages": [],
+  "status": "draft"
+ },
+ "page": {
+  "zh": "頁",
+  "en": "Page",
+  "ja": "ページ",
+  "aliases": [],
+  "class": "concept",
+  "domain": "knowledge-base",
+  "definition": "筆記、資料、圖三種的統稱。",
+  "kind_of": [],
+  "part_of": [
+   "llm-wiki"
+  ],
+  "narrower": [
+   "data-page",
+   "figure-page",
+   "note-page",
+   "page-status",
+   "pair-field"
+  ],
+  "pages": [],
+  "status": "draft"
+ },
+ "page-item": {
+  "zh": "項目",
+  "en": "Item",
+  "ja": "項目",
+  "aliases": [
+   "item",
+   "同編號"
+  ],
+  "class": "concept",
+  "domain": "knowledge-base",
+  "definition": "知識點-編號，例如 bearing-connection-001。同編號就是同一項。",
+  "kind_of": [],
+  "part_of": [
+   "llm-wiki"
+  ],
+  "narrower": [],
+  "pages": [],
+  "status": "draft"
+ },
+ "page-status": {
+  "zh": "頁的狀態",
+  "en": "Status",
+  "ja": "ステータス",
+  "aliases": [
+   "status",
+   "draft",
+   "reviewed",
+   "retired",
+   "草稿",
+   "已確認",
+   "停用"
+  ],
+  "class": "concept",
+  "domain": "knowledge-base",
+  "definition": "頁的狀態：草稿、已確認、停用；只有擁有者能設 reviewed。",
+  "kind_of": [],
+  "part_of": [
+   "page"
+  ],
+  "narrower": [],
+  "pages": [],
+  "status": "draft"
+ },
+ "pair-field": {
+  "zh": "同編號",
+  "en": "Pair",
+  "ja": "ペア",
+  "aliases": [
+   "pair"
+  ],
+  "class": "concept",
+  "domain": "knowledge-base",
+  "definition": "檔頭欄位，列出同一項的其他頁。",
+  "kind_of": [],
+  "part_of": [
+   "page"
+  ],
+  "narrower": [],
+  "pages": [],
+  "status": "draft"
+ },
+ "point-entry": {
+  "zh": "入口檔",
+  "en": "NOTE.md",
+  "ja": "入口ファイル",
+  "aliases": [
+   "NOTE.md",
+   "知識點入口"
+  ],
+  "class": "concept",
+  "domain": "knowledge-base",
+  "definition": "每個知識點的入口，像技能的 SKILL.md。",
+  "kind_of": [],
+  "part_of": [
+   "knowledge-point"
+  ],
+  "narrower": [],
+  "pages": [],
+  "status": "draft"
+ },
+ "profile-example": {
+  "zh": "示範設定",
+  "en": "Profile example",
+  "ja": "サンプルプロファイル",
+  "aliases": [
+   "profile.example"
+  ],
+  "class": "concept",
+  "domain": "knowledge-base",
+  "definition": "去識別化的 profile，公開輸出時取代 profiles。",
+  "kind_of": [
+   "skill-profile"
+  ],
+  "part_of": [
+   "skill"
+  ],
+  "narrower": [],
+  "pages": [],
+  "status": "draft"
+ },
+ "query": {
+  "zh": "查詢",
+  "en": "Query",
+  "ja": "検索",
+  "aliases": [],
+  "class": "command",
+  "domain": "knowledge-base",
+  "definition": "找頁、查表、追依據。",
+  "kind_of": [],
+  "part_of": [
+   "llm-wiki"
+  ],
+  "narrower": [],
+  "pages": [],
+  "status": "draft"
+ },
+ "raw": {
+  "zh": "原件",
+  "en": "Raw source",
+  "ja": "原典",
+  "aliases": [
+   "原始資料",
+   "登記卡",
+   "source"
+  ],
+  "class": "concept",
+  "domain": "knowledge-base",
+  "definition": "原始的 PDF、網頁快照，和它的登記卡。",
+  "kind_of": [],
+  "part_of": [
+   "llm-wiki"
+  ],
+  "narrower": [],
+  "pages": [],
+  "status": "draft"
+ },
+ "region-box": {
+  "zh": "裁切範圍",
+  "en": "Region box",
+  "ja": "切り抜き範囲",
+  "aliases": [
+   "region",
+   "region box"
+  ],
+  "class": "concept",
+  "domain": "knowledge-base",
+  "definition": "裁切的頁碼和座標，可以重新裁出同一塊。",
+  "kind_of": [],
+  "part_of": [
+   "crop"
+  ],
+  "narrower": [],
+  "pages": [],
+  "status": "draft"
+ },
+ "schema-json": {
+  "zh": "結構定義",
+  "en": "Schema",
+  "ja": "スキーマ",
+  "aliases": [
+   "schema",
+   "schema.json"
+  ],
+  "class": "concept",
+  "domain": "knowledge-base",
+  "definition": "`schema.json`，規定有哪些類型和欄位。",
+  "kind_of": [],
+  "part_of": [
+   "llm-wiki"
+  ],
+  "narrower": [],
+  "pages": [],
+  "status": "draft"
+ },
+ "share-level": {
+  "zh": "可見度",
+  "en": "Share",
+  "ja": "公開範囲",
+  "aliases": [
+   "share",
+   "public",
+   "attribution",
+   "private"
+  ],
+  "class": "concept",
+  "domain": "knowledge-base",
+  "definition": "public 可以公開、attribution 要標出處、private 不能公開。原件登記，其他推算。",
+  "kind_of": [],
+  "part_of": [
+   "llm-wiki"
+  ],
+  "narrower": [],
+  "pages": [],
+  "status": "draft"
+ },
+ "skill": {
+  "zh": "技能",
+  "en": "Skill",
+  "ja": "スキル",
+  "aliases": [
+   "技能包",
+   "能力包"
+  ],
+  "class": "concept",
+  "domain": "knowledge-base",
+  "definition": "`skills/<代號>/`：agent 可以照著做的能力包，依據頁，全部主題共用。",
+  "kind_of": [],
+  "part_of": [
+   "llm-wiki"
+  ],
+  "narrower": [
+   "profile-example",
+   "skill-incoming",
+   "skill-md",
+   "skill-profile"
+  ],
+  "pages": [],
+  "status": "draft"
+ },
+ "skill-incoming": {
+  "zh": "待併入的改動",
+  "en": "Incoming",
+  "ja": "取り込み待ちの変更",
+  "aliases": [
+   "incoming"
+  ],
+  "class": "concept",
+  "domain": "knowledge-base",
+  "definition": "技能的 `incoming/`：從工作專案帶回來、還沒併入的差異。",
+  "kind_of": [],
+  "part_of": [
+   "skill"
+  ],
+  "narrower": [],
+  "pages": [],
+  "status": "draft"
+ },
+ "skill-md": {
+  "zh": "技能本體",
+  "en": "SKILL.md",
+  "ja": "スキル本体",
+  "aliases": [
+   "SKILL.md"
+  ],
+  "class": "concept",
+  "domain": "knowledge-base",
+  "definition": "技能的說明：何時用、規則、步驟。",
+  "kind_of": [],
+  "part_of": [
+   "skill"
+  ],
+  "narrower": [],
+  "pages": [],
+  "status": "draft"
+ },
+ "skill-profile": {
+  "zh": "個人設定",
+  "en": "Profile",
+  "ja": "プロファイル",
+  "aliases": [
+   "profile",
+   "profiles",
+   "專案設定"
+  ],
+  "class": "concept",
+  "domain": "knowledge-base",
+  "definition": "技能的 `profiles/<專案主題>/`：某個專案的慣例、參數、案件經驗，私人。",
+  "kind_of": [],
+  "part_of": [
+   "skill"
+  ],
+  "narrower": [
+   "profile-example"
+  ],
+  "pages": [],
+  "status": "draft"
+ },
+ "term": {
+  "zh": "詞條",
+  "en": "Term",
+  "ja": "用語",
+  "aliases": [
+   "原子",
+   "atom",
+   "用語對照",
+   "glossary"
+  ],
+  "class": "concept",
+  "domain": "knowledge-base",
+  "definition": "最小的概念：有中英日名稱、上下位關係，依領域分檔，全部主題共用。",
+  "kind_of": [],
+  "part_of": [
+   "llm-wiki"
+  ],
+  "narrower": [],
+  "pages": [],
+  "status": "draft"
+ },
+ "wiki": {
+  "zh": "主題",
+  "en": "Wiki",
+  "ja": "テーマ",
+  "aliases": [
+   "collection",
+   "主題資料夾"
+  ],
+  "class": "concept",
+  "domain": "knowledge-base",
+  "definition": "`wikis/` 底下的一個資料夾，例如 timber、project-demo。",
+  "kind_of": [],
+  "part_of": [
+   "llm-wiki"
+  ],
+  "narrower": [],
+  "pages": [],
+  "status": "draft"
+ },
+ "wiki-index": {
+  "zh": "索引",
+  "en": "Index",
+  "ja": "索引",
+  "aliases": [
+   "index",
+   "OVERVIEW.md"
+  ],
+  "class": "concept",
+  "domain": "knowledge-base",
+  "definition": "`index/` 裡給 agent 先讀的目錄。",
+  "kind_of": [],
+  "part_of": [
+   "llm-wiki"
+  ],
+  "narrower": [],
+  "pages": [],
+  "status": "draft"
+ },
+ "work-plan": {
+  "zh": "計畫",
+  "en": "Plan",
+  "ja": "計画",
+  "aliases": [
+   "plan",
+   "specs",
+   "tasks",
+   "規格",
+   "任務"
+  ],
+  "class": "concept",
+  "domain": "knowledge-base",
+  "definition": "`docs/plans/<日期-名稱>/` 的 plan、specs、tasks 三份檔案，給一次做不完的工作用。",
+  "kind_of": [],
+  "part_of": [
+   "llm-wiki"
+  ],
+  "narrower": [],
+  "pages": [],
+  "status": "draft"
+ }
+}
